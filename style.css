@@ -1,0 +1,49 @@
+:root {
+  --light-pink: rgb(253, 221, 226)
+}
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: var(--light-pink);
+    position: relative;
+    margin: 0px;
+}
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+main{
+    padding: 80px 20px 400px 20px;
+    width: 700px;
+    max-width: 90vw;
+    margin: 0px auto;
+}
+footer{
+    background: linear-gradient(var(--light-pink), pink 10%);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 50px 20px 30px 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.hidden{
+    display: none !important;
+}
+#emergency{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
