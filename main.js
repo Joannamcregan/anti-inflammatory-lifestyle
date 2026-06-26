@@ -1,4 +1,4 @@
-import u from './umbrella.esm';
+import u from './umbrella.esm.js';
 
 const normal = u('.normal');
 const special = u('.special');
