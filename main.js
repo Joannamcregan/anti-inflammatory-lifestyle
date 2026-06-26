@@ -6,7 +6,9 @@ const helpLinks = u('.special-link');
 const safetyLink = u('#emergency');
 
 window.addEventListener("devicemotion", (event) => {
-  console.log(`${event.acceleration.x} m/s2`);
+    let motion = `${event.acceleration.x} m/s2`
+    console.log(motion);
+    document.getElementById('motion').innerText = motion;
 });
 
 safetyLink.on('click', ()=>{
