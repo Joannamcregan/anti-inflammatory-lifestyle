@@ -12,11 +12,15 @@ window.addEventListener("devicemotion", (event) => {
 });
 
 safetyLink.on('click', ()=>{
-    showNormal()
+    showNormal();
 })
 helpLinks.on('click', (event)=>{
-    showSpecial(event)
-});
+    showSpecial(event);
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+        DeviceMotionEvent.requestPermission();
+    }    
+}
+);
 
 function showSpecial(e){
     normal.addClass('hidden');
