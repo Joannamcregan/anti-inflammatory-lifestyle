@@ -3,10 +3,10 @@ import u from './umbrella.esm.js';
 const normal = u('.normal');
 const special = u('.special');
 const helpLinks = u('.special-link');
-const safetyLink = u('#emergency');
+const safetyLink = u('#top-link');
 
 window.addEventListener("devicemotion", (event) => {
-    let motion = `${event.acceleration.x} m/s2`
+    let motion = `${event.acceleration.x} m/s2 on x-axis, ${event.acceleration.y} m/s2 on y-axis, ${event.acceleration.z} m/s on z-axis`
     console.log(motion);
     document.getElementById('motion').innerText = motion;
 });
