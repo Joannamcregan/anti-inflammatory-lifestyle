@@ -18,11 +18,14 @@ header{
     margin-bottom: 20px;
     font-family: serif;
 }
-header img{
+#mobile-link{
     display: none;
+    width: 30px;
+    height: auto;
 }
 header nav{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     width: 700px;
     margin: auto;
@@ -42,14 +45,56 @@ main{
         border-radius: 10px;
         padding: 10px;
     }
-    header img{
+    #mobile-link{
         display: block;
+    }
+    #mobile-close{
+        position: absolute;
+        top: 5px;
+        right: 5px;
     }
     header nav{
         display: none;
+        position: relative;
+        flex-direction: column;
+    }
+    header nav.active{
+        display: flex !important;
+        flex-direction: column;
+        width: fit-content;
+    }
+    header nav.fadeIn{
+        display: flex !important;
+        flex-direction: column;
+        animation: fadeIn 1s forwards;
+    }
+    header nav.fadeOut{
+        display: flex !important;
+        flex-direction: column;
+        animation: fadeOut 1s forwards;
+    }
+    header nav a, header nav span{
+        width: fit-content;
+        padding: 10px;
     }
     main{
         padding: 50px 20px 400px 20px;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
 footer{

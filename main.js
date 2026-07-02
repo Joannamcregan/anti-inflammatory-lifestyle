@@ -6,6 +6,9 @@ const helpLinks = u('.special-link');
 const safetyLink = u('#top-link');
 const gotIt = u('#got-it');
 const specialNotes = u('.special-note');
+const mobileLink = u('#mobile-link');
+const mobileNav = u('#mobile-nav');
+const mobileClose = u('#mobile-close');
 
 window.addEventListener("devicemotion", (event) => {
     let motion = `${event.acceleration.x} m/s2 on x-axis, ${event.acceleration.y} m/s2 on y-axis, ${event.acceleration.z} m/s on z-axis`
@@ -26,8 +29,24 @@ helpLinks.on('click', (event)=>{
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
         DeviceMotionEvent.requestPermission();
     }    
-}
-);
+});
+
+mobileLink.on('click', (event)=>{
+    mobileNav.addClass('fadeIn');
+    u(event.target).addClass('hidden');
+    setTimeout(()=>{
+        mobileClose.removeClass('hidden');
+    }, 1000)
+})
+
+mobileClose.on('click', (event)=>{
+    mobileNav.addClass('fadeOut');
+    mobileNav.removeClass('fadeIn');
+    u(event.target).addClass('hidden');
+    setTimeout(()=>{
+        mobileLink.removeClass('hidden');
+    }, 1000)
+})
 
 function showSpecial(e){
     console.log('showing special');
