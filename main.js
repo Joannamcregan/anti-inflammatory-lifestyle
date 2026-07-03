@@ -9,6 +9,7 @@ const specialNotes = u('.special-note');
 const mobileLink = u('#mobile-link');
 const mobileNav = u('#mobile-nav');
 const mobileClose = u('#mobile-close');
+const links = u('.mobile-link');
 
 window.addEventListener("devicemotion", (event) => {
     let motion = `${event.acceleration.x} m/s2 on x-axis, ${event.acceleration.y} m/s2 on y-axis, ${event.acceleration.z} m/s on z-axis`
@@ -16,6 +17,8 @@ window.addEventListener("devicemotion", (event) => {
         showNormal();
     }
 });
+
+links.on('click', closeMobileMenu);
 
 gotIt.on('click', ()=>{
     specialNotes.addClass('hidden');
@@ -39,14 +42,7 @@ mobileLink.on('click', (event)=>{
     }, 1000)
 })
 
-mobileClose.on('click', (event)=>{
-    mobileNav.addClass('fadeOut');
-    mobileNav.removeClass('fadeIn');
-    u(event.target).addClass('hidden');
-    setTimeout(()=>{
-        mobileLink.removeClass('hidden');
-    }, 1000)
-})
+mobileClose.on('click', closeMobileMenu);
 
 function showSpecial(e){
     console.log('showing special');
@@ -60,4 +56,15 @@ function showNormal(){
     safetyLink.attr('href', '#top');
     console.log('showing normal')
     special.addClass('hidden');
+}
+
+function closeMobileMenu(){
+    mobileNav.addClass('fadeOut');
+    mobileNav.removeClass('fadeIn');
+    mobileClose.addClass('hidden');
+    setTimeout(()=>{
+        mobileLink.removeClass('hidden');
+        mobileNav.removeClass('fadeOut');
+        mobileNav.addClass('hidden');
+    }, 1000)
 }

@@ -57,21 +57,19 @@ main{
         display: none;
         position: relative;
         flex-direction: column;
-    }
-    header nav.active{
-        display: flex !important;
-        flex-direction: column;
-        width: fit-content;
+        padding: 40px 20px 20px 20px;
     }
     header nav.fadeIn{
         display: flex !important;
         flex-direction: column;
         animation: fadeIn 1s forwards;
+        width: fit-content;
     }
     header nav.fadeOut{
         display: flex !important;
         flex-direction: column;
         animation: fadeOut 1s forwards;
+        width: fit-content;
     }
     header nav a, header nav span{
         width: fit-content;
