@@ -1,128 +1,80 @@
 :root {
-  --light-pink: rgb(253, 221, 226)
+  --light-pink: rgb(253, 221, 226);
 }
-body{
-    font-family: sans-serif;
-    font-size: 16px;
-    background-color: var(--light-pink);
-    position: relative;
-    margin: 0px;
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: var(--light-pink);
+  position: relative;
+  margin: 0px;
 }
-header{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    background-color: pink;
-    padding: 20px;
-    margin-bottom: 20px;
-    font-family: serif;
+#top {
+  background: pink;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
-#mobile-link{
-    display: none;
-    width: 30px;
-    height: auto;
-}
-header nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 700px;
-    margin: auto;
-}
-main{
-    padding: 80px 20px 400px 20px;
-    width: 650px;
-    max-width: 90vw;
-    margin: 0px auto;
-}
-@media screen and (max-width: 800px) {
-    header{
-        top: 10px;
-        left: auto;
-        right: 10px;
-        width: fit-content;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    #mobile-link{
-        display: block;
-    }
-    #mobile-close{
-        position: absolute;
-        top: 5px;
-        right: 5px;
-    }
-    header nav{
-        display: none;
-        position: relative;
-        flex-direction: column;
-        padding: 40px 20px 20px 20px;
-    }
-    header nav.fadeIn{
-        display: flex !important;
-        flex-direction: column;
-        animation: fadeIn 1s forwards;
-        width: fit-content;
-    }
-    header nav.fadeOut{
-        display: flex !important;
-        flex-direction: column;
-        animation: fadeOut 1s forwards;
-        width: fit-content;
-    }
-    header nav a, header nav span{
-        width: fit-content;
-        padding: 10px;
-    }
-    main{
-        padding: 50px 20px 400px 20px;
-    }
+h1,
+h2,
+h3,
+h4,
+p {
+  width: 650px;
+  max-width: 90vw;
+  margin: auto;
+  padding: 10px;
 }
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-footer{
-    background: linear-gradient(var(--light-pink), pink 10%);
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    padding: 50px 20px 30px 20px;
-    margin: auto;
-    text-align: center;
-}
-
-h1, h2, h3{
-    font-family: serif;
+footer {
+  background: linear-gradient(var(--light-pink), pink 10%);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 50px 20px 30px 20px;
+  margin: auto;
+  text-align: center;
 }
 
-.hidden{
-    display: none !important;
+h1,
+h2,
+h3 {
+  font-family: serif;
 }
-#top-link{
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    box-shadow: 2px 2px 5px #333;
-    z-index: 1000;
+
+.hidden {
+  display: none !important;
 }
-#got-it{
-    text-decoration: underline;
+#top-link {
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 2px 2px 5px #333;
+  z-index: 1000;
+}
+#permission-prompt {
+  text-decoration: underline;
+}
+.highlighted {
+  font-size: larger;
+  font-family: serif;
 }
