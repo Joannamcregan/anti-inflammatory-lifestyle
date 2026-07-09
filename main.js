@@ -38,19 +38,3 @@ function showNormal() {
   special.addClass("hidden");
   normal.removeClass("hidden");
 }
-
-// helpLinks.on("click", event => {
-//   showSpecial(event);
-//   document.getElementById("top-link").addEventListener("click", () => {
-//     showNormal();
-//   });
-//   if (typeof DeviceMotionEvent.requestPermission === "function") {
-//     DeviceMotionEvent.requestPermission();
-//   }
-// });
-
-// function showSpecial(e) {
-//   console.log("showing special");
-//   special.removeClass("hidden");
-//   safetyLink.attr("href", "#mood");
-// }
