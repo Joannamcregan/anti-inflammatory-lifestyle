@@ -8,6 +8,9 @@ body {
   position: relative;
   margin: 0px;
 }
+main {
+  padding-bottom: 200px;
+}
 #top {
   background: pink;
   width: 100%;
@@ -41,17 +44,6 @@ p {
     opacity: 0;
   }
 }
-footer {
-  background: linear-gradient(var(--light-pink), pink 10%);
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  padding: 50px 20px 30px 20px;
-  margin: auto;
-  text-align: center;
-}
-
 h1,
 h2,
 h3 {
