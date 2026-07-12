@@ -1,6 +1,7 @@
 :root {
   --light-pink: rgb(253, 221, 226);
-  --dark-red: rgb(118, 0, 0);
+  --dark-red: rgb(129, 0, 26);
+  --bright-red: rgb(172, 0, 34);
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -75,22 +76,19 @@ a {
 }
 #flames {
   font-size: 68px;
-  animation: flicker 5s infinite;
+  animation: flicker 4s infinite;
 }
 @keyframes flicker {
   0%,
   100% {
     font-style: normal;
     color: black;
+    text-shadow: none;
   }
-  30%,
-  70% {
-    font-style: normal;
-    color: var(--dark-red);
-  }
-  20%,
-  70% {
+  50% {
     font-style: italic;
+    color: var(--dark-red);
+    text-shadow: 0px 0px 5px var(--bright-red);
   }
 }
 #top h2 {
