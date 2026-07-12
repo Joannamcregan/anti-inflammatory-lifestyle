@@ -7,10 +7,14 @@ const safetyLink = u("#top-link");
 const specialNotes = u(".special-note");
 const permissionLink = u("#permission-prompt");
 
+// window.addEventListener("beforeunload", () => {
+//   showNormal();
+// });
+
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "hidden") {
-    showNormal();
-  }
+  //   if (document.visibilityState === "hidden") {
+  showNormal();
+  //   }
 });
 
 window.addEventListener("devicemotion", event => {
