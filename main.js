@@ -8,12 +8,12 @@ const specialNotes = u(".special-note");
 const permissionLink = u("#permission-prompt");
 
 window.addEventListener("beforeunload", () => {
-  showNormal();
+  showNormalTop();
 });
 
 document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "hidden") {
-    showNormal();
+    showNormalTop();
   }
 });
 
@@ -41,4 +41,10 @@ safetyLink.on("click", () => {
 function showNormal() {
   special.addClass("hidden");
   normal.removeClass("hidden");
+}
+
+function showNormalTop() {
+  showNormal();
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
