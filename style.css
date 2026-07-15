@@ -51,6 +51,7 @@ h3 {
 #permission-prompt,
 #periods {
   text-decoration: underline;
+  cursor: pointer;
 }
 .highlighted {
   font-size: larger;

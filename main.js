@@ -6,6 +6,7 @@ const normal = u(".normal");
 const safetyLink = u("#top-link");
 const specialNotes = u(".special-note");
 const permissionLink = u("#permission-prompt");
+const periods = u("#periods");
 
 window.addEventListener("beforeunload", () => {
   showNormalTop();
@@ -34,6 +35,10 @@ permissionLink.on("click", event => {
   }
 });
 
+periods.on("click", () => {
+  showSpecial();
+});
+
 safetyLink.on("click", () => {
   showNormal();
 });
@@ -47,4 +52,9 @@ function showNormalTop() {
   showNormal();
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+function showSpecial() {
+  normal.addClass("hidden");
+  special.removeClass("hidden");
 }
